@@ -8,10 +8,10 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+  <Tilt className="  xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className="w-full  p-[1px] rounded-[20px] shadow-card">
+      className="w-full blue-white-gradient  p-[1px] rounded-[20px] shadow-card">
       <div
         options={{
           max: 2,
@@ -44,10 +44,10 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        This section features a few real-world projects that showcase my skills
-        in problem-solving, technology, and project management. Each project is
-        briefly described, with relevant code repositories provided for further
-        exploration.
+        This section showcases the services I offer, including web development,
+        React development, and content writing. I specialize in creating
+        scalable and secure web applications and dynamic user interfaces using
+        the latest technologies and frameworks.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

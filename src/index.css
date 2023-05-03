@@ -52,6 +52,18 @@
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
+.blue-white-gradient {
+  background: #ffffff;
+  background: linear-gradient(90deg, #0072ff 0%, #ffffff 100%);
+  background: -webkit-linear-gradient(90deg, #0072ff 0%, #ffffff 100%);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.blue-white-gradient:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
 
 .orange-text-gradient {
   background: #f12711; /* fallback for old browsers */
@@ -300,4 +312,8 @@ header {
   height: 20px;
   width: 30px;
   color: rgb(11, 11, 68);
+}
+
+.my-card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

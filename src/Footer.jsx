@@ -4,6 +4,8 @@ import {
   FacebookRounded,
   GitHub,
   Phone,
+  Timeline,
+  WhatsApp,
 } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 
@@ -27,6 +29,9 @@ export const Footer = () => {
       </div>
       <div className="contacts">
         <IconButton
+          onClick={() =>
+            window.open("https://wakatime.com/@JaneNdirangu", "_blank")
+          }
           className="btn"
           style={{
             padding: "3vh",
@@ -34,10 +39,27 @@ export const Footer = () => {
             borderRadius: "50%",
             background: "#E8F6FB",
           }}>
-          <a href=""></a>
-          <EmailRounded />
+          <a href=""></a>w
+        </IconButton>
+
+        <IconButton
+          onClick={() =>
+            window.open(
+              "https://web.facebook.com/profile.php?id=100010907769781",
+              "_blank"
+            )
+          }
+          className="btn"
+          style={{
+            padding: "3vh",
+            color: "#fec5e67",
+            borderRadius: "50%",
+            background: "#E8F6FB",
+          }}>
+          <FacebookRounded style={{ color: "blue" }} />
         </IconButton>
         <IconButton
+          onClick={() => window.open("https://wa.me/+25491055992/?", "_blank")}
           className="btn"
           style={{
             padding: "3vh",
@@ -45,17 +67,7 @@ export const Footer = () => {
             borderRadius: "50%",
             background: "#E8F6FB",
           }}>
-          <FacebookRounded />
-        </IconButton>
-        <IconButton
-          className="btn"
-          style={{
-            padding: "3vh",
-            color: "#fec5e67",
-            borderRadius: "50%",
-            background: "#E8F6FB",
-          }}>
-          <GitHub />
+          <WhatsApp style={{ color: "green" }} />
         </IconButton>
 
         {/* <a href="mailto:janendirangu49@gmai.com">

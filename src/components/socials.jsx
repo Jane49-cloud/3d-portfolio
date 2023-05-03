@@ -13,6 +13,12 @@ const Socials = () => {
         </div>
         <div className="personalinfo">
           <IconButton
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/ndirangu-jane-692477256/",
+                "_blank"
+              )
+            }
             className="btn"
             style={{
               padding: "3vh",
@@ -23,6 +29,7 @@ const Socials = () => {
             <LinkedIn style={{ color: "blue" }} />
           </IconButton>
           <IconButton
+            onClick={() => window.open("https://dev.to/jane49cloud", "_blank")}
             className="btn"
             style={{
               padding: "3vh",
@@ -33,6 +40,9 @@ const Socials = () => {
             <LogoDev style={{ color: "black" }} />
           </IconButton>
           <IconButton
+            onClick={() =>
+              window.open("https://github.com/Jane49-cloud", "_blank")
+            }
             className="btn"
             style={{
               padding: "3vh",

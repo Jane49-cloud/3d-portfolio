@@ -244,7 +244,7 @@ const projects = [
       },
     ],
     image: ecommerce,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jane49-cloud/ecommerce",
   },
   {
     name: "Blog",
@@ -265,12 +265,12 @@ const projects = [
       },
     ],
     image: blog,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jane49-cloud/FPOST-FRONTEND",
   },
   {
     name: "Buddy",
     description:
-      "A simple social app that connects users. Allows  them to crate edit and delete post...",
+      "A simple social app that connects users. Allows  them to create edit and delete post...",
     tags: [
       {
         name: "DRF",
@@ -286,7 +286,7 @@ const projects = [
       },
     ],
     image: buddy,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jane49-cloud/Django-API",
   },
   {
     name: "Real Estate",
@@ -306,7 +306,7 @@ const projects = [
       },
     ],
     image: realestate,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jane49-cloud/mern-real-estate",
   },
   {
     name: "Chat App",
@@ -327,7 +327,7 @@ const projects = [
       },
     ],
     image: messager,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jane49-cloud/mern",
   },
   {
     name: "Django CRM",
@@ -348,7 +348,7 @@ const projects = [
       },
     ],
     image: leads,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Jane49-cloud/djangoCRM",
   },
 ];
 
