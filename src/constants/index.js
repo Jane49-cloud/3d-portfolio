@@ -5,6 +5,9 @@ import {
   web,
   javascript,
   typescript,
+  Sass,
+  bootstrap,
+  python,
   html,
   css,
   reactjs,
@@ -82,8 +85,20 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Scss",
+    icon: Sass,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "Python",
+    icon: python,
   },
   // {
   //   name: "TypeScript",

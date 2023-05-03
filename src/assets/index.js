@@ -21,6 +21,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import django from "./django.png";
+import Sass from "./sass.png";
+import bootstrap from "./bootstrap.png";
+import python from "./python.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -63,6 +66,9 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  Sass,
+  bootstrap,
+  python,
   redux,
   tailwind,
   typescript,

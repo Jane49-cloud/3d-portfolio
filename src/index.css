@@ -12,10 +12,10 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
-body {
+/* body {
   background-image: url("/src/assets/herobg.jpeg");
   position: center;
-}
+} */
 
 .hash-span {
   margin-top: -100px;
@@ -213,4 +213,91 @@ body {
   width: 50px;
   object-fit: cover;
   object-fit: contain;
+}
+.profile {
+  background: #080129;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: whitesmoke;
+  transition: all 0.3s linear;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px hsl(192, 9%, 10%);
+}
+@media screen and (max-width: 500px) {
+  .profile {
+    width: 90%;
+  }
+}
+
+.profile:hover {
+  box-shadow: 0 5px 15px rgb(58, 55, 55);
+  background-color: #04163d;
+}
+.img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.btn {
+  background-color: white;
+}
+
+.personalinfo,
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 3px;
+  /* margin-right: 10px; */
+  color: white;
+}
+
+.btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+header {
+  background-color: rgb(12, 9, 53);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.contacts {
+  color: white;
+  text-decoration: none;
+}
+#icon {
+  margin-top: 20px;
+  height: 20px;
+  width: 30px;
+  color: rgb(11, 11, 68);
 }
