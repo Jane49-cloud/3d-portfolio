@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import {
   About,
   Contact,
@@ -13,7 +13,7 @@ import {
 import { Footer } from "./Footer";
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bng-contain bg-no-repeat bg-center">
           <Navbar />
@@ -29,7 +29,7 @@ const App = () => {
         {/* <StarsCanvas /> */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
