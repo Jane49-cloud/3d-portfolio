@@ -24,7 +24,8 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      >
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -35,7 +36,8 @@ const ProjectCard = ({
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer">
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
               <img
                 src={github}
                 alt="source code"
@@ -54,7 +56,8 @@ const ProjectCard = ({
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}>
+              className={`text-[14px] ${tag.color}`}
+            >
               #{tag.name}
             </p>
           ))}
@@ -75,7 +78,8 @@ const Works = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        >
           Below are some projects showcasing my skills and experience with
           real-world examples of my work. Each project is described briefly and
           includes links to its code repository. They demonstrate my ability to

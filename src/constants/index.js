@@ -228,7 +228,7 @@ const projects = [
   {
     name: "E-commerce",
     description:
-      "This application allow users to create , read and edit blogs. Admin manages posts by approving or denying them ...",
+      "A comprehensive e-commerce platform that allows users to shop by category.View variety of products and make orders",
     tags: [
       {
         name: "Django",
@@ -249,7 +249,8 @@ const projects = [
   {
     name: "Blog",
     description:
-      "A comprehensive e-commerce platform that allows users to shop by category.View variety of products and make orders",
+      "This application allow users to create , read and edit blogs. Admin manages posts by approving or denying them ...",
+
     tags: [
       {
         name: "Node",
