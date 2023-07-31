@@ -18,8 +18,8 @@ export const Footer = () => {
             className="btn"
             style={{
               color: "#fec5e67",
-              borderRadius: "20%",
-              background: "#E8F6FB",
+              borderRadius: "50%",
+              background: "#eee",
             }}
           >
             <Phone />
@@ -35,8 +35,8 @@ export const Footer = () => {
           className="btn"
           style={{
             color: "#fec5e67",
-            borderRadius: "20%",
-            background: "#E8F6FB",
+            borderRadius: "50%",
+            background: "#eee",
           }}
         >
           <a href=""></a>w
@@ -52,8 +52,8 @@ export const Footer = () => {
           className="btn"
           style={{
             color: "#fec5e67",
-            borderRadius: "20%",
-            background: "#E8F6FB",
+            borderRadius: "50%",
+            background: "#eee",
           }}
         >
           <FacebookRounded style={{ color: "blue" }} />
@@ -62,9 +62,9 @@ export const Footer = () => {
           onClick={() => window.open("https://wa.me/+25491055992/?", "_blank")}
           className="btn"
           style={{
-            color: "#fec5e67",
-            borderRadius: "20%",
-            background: "#E8F6FB",
+            color: "#eee",
+            borderRadius: "50%",
+            backgroundColor: "#eee",
           }}
         >
           <WhatsApp style={{ color: "green" }} />
