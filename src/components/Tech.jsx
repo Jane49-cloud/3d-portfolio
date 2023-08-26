@@ -5,21 +5,28 @@ import { IconButton } from "@mui/material";
 
 const Tech = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-      {technologies.map((technology) => (
-        <div className="w-28 h-28" key={technology.name}>
-          <IconButton
-            className="p-2"
-            style={{ backgroundColor: "white", borderRadius: "50%" }}
-          >
-            <img
-              src={technology.icon}
-              alt=""
-              className="w-28 h-28 object-contain rounded-full"
-            />
-          </IconButton>
-        </div>
-      ))}
+    <div>
+      <h2 className="">Technologies</h2>
+      <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] mb-5">
+        Below are some of the technologies (programming tools), I use to
+        accomplish my tasks
+      </p>
+      <div className="flex flex-row flex-wrap justify-center gap-10">
+        {technologies.map((technology) => (
+          <div className="w-28 h-28" key={technology.name}>
+            <IconButton
+              className="p-2 hover:animate-bounce"
+              style={{ backgroundColor: "white", borderRadius: "50%" }}
+            >
+              <img
+                src={technology.icon}
+                alt=""
+                className="w-[100px] h-[100px] object-contain rounded-full"
+              />
+            </IconButton>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
