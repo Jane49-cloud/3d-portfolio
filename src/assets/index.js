@@ -40,6 +40,7 @@ import messager from "./Messager.png";
 import cocktail from "./cocktailapi.png";
 import leads from "./leads.png";
 import realestate from "./realestate.png";
+import Reshopify from "./Reshopify.png";
 
 import email from "./email.png";
 import dev from "./dev.png";
@@ -92,4 +93,5 @@ export {
   whatsapp,
   phone,
   dev,
+  Reshopify,
 };

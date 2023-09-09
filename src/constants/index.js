@@ -39,6 +39,7 @@ import {
   whatsapp,
   phone,
   dev,
+  Reshopify,
 } from "../assets";
 
 export const navLinks = [
@@ -290,24 +291,37 @@ const projects = [
     source_code_link: "https://github.com/Jane49-cloud/Django-API",
   },
   {
-    name: "Real Estate",
-    description: "A real estate management admin dashboard ..",
+    name: "Reshopify",
+    description:
+      "A web application for reselling Refurbished Goods, has functional filters, bidding and Notification triggers",
     tags: [
       {
         name: "Node",
         color: "blue-text-gradient",
       },
       {
-        name: "React-Typescript",
+        name: "React",
         color: "green-text-gradient",
       },
       {
-        name: "Css",
+        name: "Tailwind",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Ant Design",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Mongo",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: realestate,
-    source_code_link: "https://github.com/Jane49-cloud/mern-real-estate",
+    image: Reshopify,
+    source_code_link: "https://github.com/Jane49-cloud/Reshopify",
   },
   {
     name: "Chat App",
