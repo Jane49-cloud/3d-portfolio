@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
@@ -47,7 +48,9 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          toast.success(
+            "Thank you. I will get back to you as soon as possible 🥳."
+          );
 
           setForm({
             name: "",
@@ -59,23 +62,26 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          toast.error("Ahh, something went wrong🤨. Please try again.");
         }
       );
   };
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-20 overflow-hidden`}>
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-20 overflow-hidden`}
+    >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+      >
         <p className={styles.sectionSubText}>Get in touch</p>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8">
+          className="mt-12 flex flex-col gap-8"
+        >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -112,7 +118,8 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary">
+            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+          >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
@@ -120,7 +127,8 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
         <Socials />
       </motion.div>
     </div>

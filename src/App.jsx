@@ -1,4 +1,6 @@
 import { BrowserRouter, HashRouter } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   About,
   Contact,
@@ -28,6 +30,7 @@ const App = () => {
         <Contact />
         {/* <StarsCanvas /> */}
         <Footer />
+        <ToastContainer position="bottom-right" />
       </div>
     </HashRouter>
   );
