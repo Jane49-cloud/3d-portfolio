@@ -6,7 +6,7 @@ import { IconButton } from "@mui/material";
 const Tech = () => {
   return (
     <div>
-      <h2 className="">Technologies</h2>
+      <h2 className="text-xl">Skills</h2>
       <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] mb-5">
         Below are some of the technologies (programming tools), I use to
         accomplish my tasks
@@ -21,7 +21,7 @@ const Tech = () => {
               <img
                 src={technology.icon}
                 alt=""
-                className="w-[100px] h-[100px] object-contain rounded-full"
+                className="w-[80px] h-[80px] object-contain rounded-full"
               />
             </IconButton>
           </div>
@@ -31,4 +31,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "skills");
