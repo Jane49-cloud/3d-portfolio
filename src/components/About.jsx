@@ -17,7 +17,7 @@ const ServiceCard = ({ index, title, icon }) => (
         options={{
           max: 2,
           scale: 1,
-          speed: 450,
+          speed: 400,
         }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
