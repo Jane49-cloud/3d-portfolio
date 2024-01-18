@@ -8,37 +8,22 @@ import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 
 const ServiceCard = ({ index, title, icon }) => (
-    <div className="  xs:w-[250px] w-full">
+    <div className="  xs:w-[250px] w-full mt-20 ">
         <motion.div
             variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-            className="w-[90%] blue-white-gradient  p-[1px] rounded-[8px] shadow-card"
+            className="w-full violet-gradient green-pink-gradient  p-[1px] rounded-[20px] shadow-card"
         >
             <div
                 options={{
                     max: 2,
                     scale: 1,
-                    speed: 300,
+                    speed: 400,
                 }}
-                className="bg-tertiary rounded-[8px] h-[280px] flex justify-evenly items-center flex-col border-b-4"
+                className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col border-b-4"
             >
-                {/* <div className="bg-yellow-200 w-full item-center flex justify-center ">
-                   
-                </div>
+                <img src={icon} alt="web-development" className="w-16 h-16 object-contain" />
 
-                <div>
-                    {' '}
-                    
-                </div> */}
-
-                {/* upper */}
-                <div className="w-full h-1/2  flex justify-center items-center">
-                    <img src={icon} alt="web-development" className="w-16 h-16 object-contain " />
-                </div>
-                <div className="w-full h-1/2 pt-4">
-                    <h3 className="text-white text-[20px] font-bold  flex items-center justify-center">
-                        {title}
-                    </h3>
-                </div>
+                <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
             </div>
         </motion.div>
     </div>
