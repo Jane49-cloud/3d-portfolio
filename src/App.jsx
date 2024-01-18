@@ -21,7 +21,7 @@ const App = () => {
                     <Navbar />
                     <Hero />
                 </div>
-                <div className=" md:mt-2 mt-40">
+                <div className=" md:mt-2 mt-[200px]">
                     <About />
                 </div>
                 {/* <Experience /> */}
