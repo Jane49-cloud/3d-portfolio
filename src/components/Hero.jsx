@@ -26,7 +26,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className=" absolute inset-0 top-[350px] w-full   px-3  justify-between max-w-[90rem] mx-auto mt-10 flex flex-wrap gap-2  rounded-[20px] bg-opacity-100 items-center">
+            <div className=" absolute inset-0  top-[260px] md:top-[350px]  w-full   px-3  justify-between max-w-[90rem] mx-auto mt-10 flex flex-wrap gap-2 rounded-[20px] bg-opacity-100 items-center">
                 <div className="mt-5 sm:mt-0">
                     <img
                         src={code}
