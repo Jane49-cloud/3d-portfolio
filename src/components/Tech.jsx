@@ -23,7 +23,7 @@ const Tech = () => {
             key={technology.name}
           >
             <div
-              className="p-5  scale-95 bg-black-100 w-full  hover:bg-gray-400"
+              className="p-5  scale-95 bg-black-100 w-full  hover:bg-tertiary"
               style={{ backgroundColor: "", borderRadius: "8px" }}
             >
               <img
