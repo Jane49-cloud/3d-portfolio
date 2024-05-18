@@ -1,75 +1,24 @@
 import React from "react";
-import {
-  EmailRounded,
-  FacebookRounded,
-  GitHub,
-  Phone,
-  Timeline,
-  WhatsApp,
-} from "@mui/icons-material";
+import { Phone } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <header>
-      <div className="phone">
-        <h3>
-          <IconButton
-            className="btn"
-            style={{
-              color: "#fec5e67",
-              borderRadius: "50%",
-              background: "#eee",
-            }}
-          >
-            <Phone />
-          </IconButton>
-          <a href="tel: +254791055992">+254791055992</a>
-        </h3>
+    <footer className="bg-tertiary p-4">
+      <div className="flex items-center justify-center mb-4">
+        <IconButton
+          className="bg-pink-500 text-white rounded-full p-2"
+          style={{ backgroundColor: "white" }}
+        >
+          <Phone />
+        </IconButton>
+        <a href="tel:+254791055992" className="ml-2 text-lg text-gray-500">
+          +254791055992
+        </a>
       </div>
-      <div className="contacts">
-        <IconButton
-          onClick={() =>
-            window.open("https://wakatime.com/@JaneNdirangu", "_blank")
-          }
-          className="btn"
-          style={{
-            color: "#fec5e67",
-            borderRadius: "50%",
-            background: "#eee",
-          }}
-        >
-          <a href=""></a>w
-        </IconButton>
-
-        <IconButton
-          onClick={() =>
-            window.open(
-              "https://web.facebook.com/profile.php?id=100010907769781",
-              "_blank"
-            )
-          }
-          className="btn"
-          style={{
-            color: "#fec5e67",
-            borderRadius: "50%",
-            background: "#eee",
-          }}
-        >
-          <FacebookRounded style={{ color: "blue" }} />
-        </IconButton>
-        <IconButton
-          onClick={() => window.open("https://wa.me/+25491055992/?", "_blank")}
-          className="btn"
-          style={{
-            color: "#eee",
-            borderRadius: "50%",
-            backgroundColor: "#eee",
-          }}
-        >
-          <WhatsApp style={{ color: "green" }} />
-        </IconButton>
+      <div className="text-center text-gray-500">
+        <p>© 2024 Your Company Name. All rights reserved.</p>
       </div>
-    </header>
+    </footer>
   );
 };
