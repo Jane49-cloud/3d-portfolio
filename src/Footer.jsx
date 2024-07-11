@@ -17,7 +17,7 @@ export const Footer = () => {
         </a>
       </div>
       <div className="text-center text-gray-500">
-        <p>© 2024 Your Company Name. All rights reserved.</p>
+        <p>© 2024 Jane Ndirangu. All rights reserved.</p>
       </div>
     </footer>
   );
