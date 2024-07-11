@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   About,
   Contact,
-  Experience,
+  // Experience,
   // Feedbacks,
   Hero,
   Navbar,
@@ -24,7 +24,7 @@ const App = () => {
         <div className=" md:mt-2 mt-[200px]">
           <About />
         </div>
-        <Experience />
+        {/* <Experience /> */}
         <Tech />
         <Works />
         {/* <Feedbacks /> */}
