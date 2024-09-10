@@ -7,7 +7,7 @@ const Socials = () => {
   return (
     <div className="section">
       socials
-      <div className="profile">
+      <div className="profile md:w-full">
         <div className="img">
           <img src={logo} alt="" className="person-img" />
         </div>
@@ -25,7 +25,8 @@ const Socials = () => {
               color: "#fec5e67",
               borderRadius: "50%",
               background: "#E8F6FB",
-            }}>
+            }}
+          >
             <LinkedIn style={{ color: "blue" }} />
           </IconButton>
           <IconButton
@@ -36,7 +37,8 @@ const Socials = () => {
               color: "#fec5e67",
               borderRadius: "50%",
               background: "#E8F6FB",
-            }}>
+            }}
+          >
             <LogoDev style={{ color: "black" }} />
           </IconButton>
           <IconButton
@@ -49,7 +51,8 @@ const Socials = () => {
               color: "#fec5e67",
               borderRadius: "50%",
               background: "#E8F6FB",
-            }}>
+            }}
+          >
             <GitHub style={{ color: "black" }} />
           </IconButton>
         </div>
