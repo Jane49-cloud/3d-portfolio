@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -16,24 +16,28 @@ import { Footer } from "./Footer";
 const App = () => {
   return (
     <HashRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bng-contain bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
+      <div className="page-shell">
+        <div className="hero-orb" />
+        <div className="hero-orb" />
+        <div className="hero-orb" />
+
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+            <Navbar />
+            <Hero />
+          </div>
+
+          <main className="relative flex-1 pb-12">
+            <About />
+            <Tech />
+            <Works />
+            <Contact />
+          </main>
         </div>
-        <div className=" md:mt-2 mt-[200px]">
-          <About />
-        </div>
-        {/* <Experience /> */}
-        <Tech />
-        <Works />
-        {/* <Feedbacks /> */}
-        <div className="relative  z-0"></div>
-        <Contact />
-        {/* <StarsCanvas /> */}
-        <Footer />
+
         <ToastContainer position="bottom-right" />
       </div>
+      <Footer />
     </HashRouter>
   );
 };

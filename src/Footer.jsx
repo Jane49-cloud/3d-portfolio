@@ -1,23 +1,18 @@
 import React from "react";
-import { Phone } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <footer className="bg-tertiary p-4">
-      <div className="flex items-center justify-center mb-4">
-        <IconButton
-          className="bg-pink-500 text-white rounded-full p-2"
-          style={{ backgroundColor: "white" }}
+    <footer className="relative mt-auto border-t border-white/5 bg-black/20 px-6 py-8 backdrop-blur-xl sm:px-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-6 text-sm text-white/60 sm:flex-row sm:justify-between">
+        <p className="text-center sm:text-left">
+          © {new Date().getFullYear()} Jane Ndirangu. Crafted with intention and precision.
+        </p>
+        <a
+          href="tel:+254791055992"
+          className="rounded-full border border-white/10 bg-white/5 px-5 py-2 font-medium text-white/80 transition hover:border-white/30 hover:text-white"
         >
-          <Phone />
-        </IconButton>
-        <a href="tel:+254791055992" className="ml-2 text-lg text-gray-500">
-          +254791055992
+          +254&nbsp;791&nbsp;055&nbsp;992
         </a>
-      </div>
-      <div className="text-center text-gray-500">
-        <p>© 2024 Jane Ndirangu. All rights reserved.</p>
       </div>
     </footer>
   );

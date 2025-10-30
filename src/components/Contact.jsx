@@ -68,73 +68,86 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <h2 className={`${styles.sectionHeadText}`}>Contact</h2>
-      <div
-        className={`xl:mt-10 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-      >
+    <section className="relative">
+      <div className="flex flex-col gap-5">
+        <p className={styles.sectionSubText}>Contact</p>
+        <h2 className={styles.sectionHeadText}>Let’s build something iconic.</h2>
+      </div>
+
+      <div className="mt-8 flex flex-col gap-8 xl:flex-row">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="bg-[#080129] p-8 rounded-2xl md:w-[60%] "
+          className="glass-border w-full xl:max-w-3xl"
         >
-          <p className={styles.sectionSubText}>Get in touch</p>
+          <div className="glass-panel rounded-[28px] px-8 py-10">
+            <h3 className="text-xl font-semibold text-white">Project inquiry</h3>
+            <p className="mt-2 text-xs text-white/60">
+              Share a little about your goals and I’ll respond within 24 hours.
+            </p>
 
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8"
-          >
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Name</span>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Enter your name..."
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your email</span>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Enter your email address..."
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Message</span>
-              <textarea
-                rows={7}
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Enter message ..."
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="mt-8 flex flex-col gap-6"
             >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
+              <label className="flex flex-col gap-3">
+                <span className="text-xs font-medium uppercase tracking-[0.3em] text-white/60">
+                  Your name
+                </span>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Ada Lovelace"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
+                />
+              </label>
+              <label className="flex flex-col gap-3">
+                <span className="text-xs font-medium uppercase tracking-[0.3em] text-white/60">
+                  Email
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="you@amazingbrand.com"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
+                />
+              </label>
+              <label className="flex flex-col gap-3">
+                <span className="text-xs font-medium uppercase tracking-[0.3em] text-white/60">
+                  Project details
+                </span>
+                <textarea
+                  rows={6}
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Tell me about your product vision, timeline, and any must-have features."
+                  className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
+                />
+              </label>
+
+              <button
+                type="submit"
+                className="inline-flex w-fit items-center justify-center rounded-full bg-gradient-to-r from-accent to-indigo-500 px-7 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+              >
+                {loading ? "Sending…" : "Send message"}
+              </button>
+            </form>
+          </div>
         </motion.div>
 
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] w-full"
+          className="flex-1"
         >
           <Socials />
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
