@@ -12,12 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -34,6 +29,7 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -56,7 +52,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden list-none items-center gap-10 text-[16px] text-white/70 sm:flex">
+        <ul className="hidden md:flex list-none items-center gap-10 text-[16px] text-white/70">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -75,8 +71,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden items-center gap-3 sm:flex">
+        {/* Desktop CTA */}
+        <div className="hidden md:flex items-center gap-3">
           <a
             href="#contact"
             className="rounded-full bg-gradient-to-r from-accent to-indigo-500 px-6 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(79,209,197,0.35)] transition-transform hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(79,209,197,0.35)]"
@@ -85,8 +81,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu */}
-        <div className="flex flex-1 justify-end items-center sm:hidden">
+        {/* Mobile Menu Button (hidden from md and up) */}
+        <div className="flex flex-1 justify-end items-center md:hidden">
           <button
             className="p-2 -mr-2"
             onClick={() => setToggle(!toggle)}
@@ -99,13 +95,13 @@ const Navbar = () => {
             />
           </button>
 
-          {/* Mobile Dropdown Menu */}
+          {/* Mobile Dropdown */}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
             } glass-panel absolute right-4 top-[68px] z-50 min-w-[260px] rounded-2xl border border-white/15 bg-[#080d23]/95 backdrop-blur-xl p-6 shadow-2xl shadow-black/60`}
           >
-            <ul className="flex list-none flex-1 flex-col items-start gap-6 text-white/90 w-full">
+            <ul className="flex flex-col w-full gap-6 text-white/90">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
