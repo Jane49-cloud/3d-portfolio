@@ -16,12 +16,12 @@ import { Footer } from "./Footer";
 const App = () => {
   return (
     <HashRouter>
-      <div className="page-shell">
+      <div className="page-shell max-w-screen overflow-hidden ">
         <div className="hero-orb" />
         <div className="hero-orb" />
         <div className="hero-orb" />
 
-        <div className="relative z-10 flex min-h-screen flex-col">
+        <div className="relative z-10 flex min-h-screen flex-col max-w-screen overflow-hidden">
           <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
             <Navbar />
             <Hero />

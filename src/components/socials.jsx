@@ -67,7 +67,7 @@ const Socials = () => {
 
           <div className="rounded-2xl border border-white/10 bg-white/5 px-6 py-4 text-xs text-white/70">
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/40">Availability</p>
-            <p className="mt-2 text-white/80">Currently booking select collaborations for Q3–Q4 2024.</p>
+            <p className="mt-2 text-white/80">Currently booking select collaborations for Q3–Q4 2025.</p>
           </div>
         </div>
       </div>
