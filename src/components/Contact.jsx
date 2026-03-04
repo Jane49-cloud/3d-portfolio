@@ -1,7 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import { toast, ToastContainer } from "react-toastify";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
@@ -9,14 +7,11 @@ import { slideIn } from "../utils/motion";
 import Socials from "./socials";
 
 const Contact = () => {
-  const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -30,41 +25,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Jane Ndirangu",
-          from_email: form.email,
-          to_email: "janendirangu49@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          toast.success(
-            "Thank you. I will get back to you as soon as possible 🥳."
-          );
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return;
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+    const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+    );
 
-          toast.error("Ahh, something went wrong🤨. Please try again.");
-        }
-      );
+    window.location.href = `mailto:janendirangu49@gmail.com?subject=${subject}&body=${body}`;
+
+    setForm({ name: "", email: "", message: "" });
   };
 
   return (
@@ -86,7 +57,6 @@ const Contact = () => {
             </p>
 
             <form
-              ref={formRef}
               onSubmit={handleSubmit}
               className="mt-8 flex flex-col gap-6"
             >
@@ -99,7 +69,7 @@ const Contact = () => {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="Ada Lovelace"
+                  placeholder="Enter your name"
                   className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
                 />
               </label>
@@ -112,7 +82,7 @@ const Contact = () => {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="you@amazingbrand.com"
+                  placeholder="Enter your email"
                   className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
                 />
               </label>
@@ -125,7 +95,7 @@ const Contact = () => {
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your product vision, timeline, and any must-have features."
+                  placeholder="Enter your message"
                   className="rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-white placeholder:text-white/40 focus:border-accent focus:outline-none"
                 />
               </label>
@@ -134,7 +104,7 @@ const Contact = () => {
                 type="submit"
                 className="inline-flex w-fit items-center justify-center rounded-full bg-gradient-to-r from-accent to-indigo-500 px-7 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                {loading ? "Sending…" : "Send message"}
+                Send message
               </button>
             </form>
           </div>

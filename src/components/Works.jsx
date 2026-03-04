@@ -82,7 +82,7 @@ const Works = () => {
         className="mt-10 grid gap-8 md:grid-cols-3"
       >
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard key={project.name} index={index} {...project} />
         ))}
       </motion.div>
     </section>

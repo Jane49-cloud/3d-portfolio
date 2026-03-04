@@ -108,20 +108,22 @@ const Hero = () => {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 mb-12">
-              <motion.button
+              <motion.a
+                href="#works"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold text-white shadow-[0_0_40px_rgba(6,182,212,0.4)] hover:shadow-[0_0_60px_rgba(6,182,212,0.6)] transition-shadow"
               >
                 View Portfolio
-              </motion.button>
-              <motion.button
+              </motion.a>
+              <motion.a
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-slate-700 hover:border-cyan-500/50 rounded-full font-semibold text-white backdrop-blur-sm transition-colors"
               >
                 Let's Talk
-              </motion.button>
+              </motion.a>
             </div>
 
             {/* Stats */}

@@ -23,17 +23,15 @@ const Tech = () => {
             viewport={{ once: true, amount: 0.4 }}
             className="group"
           >
-            <div className="glass-border rounded-[22px] p-[1.5px] transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-glow">
-              <div className="glass-panel flex flex-col items-center gap-4 rounded-[20px] px-6 py-8 text-center">
-                <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/10">
-                  <img
-                    src={technology.icon}
-                    alt={technology.name}
-                    className="h-12 w-12 object-contain"
-                  />
-                </div>
-                <p className="text-sm font-medium text-white/80">{technology.name}</p>
+            <div className="flex flex-col items-center gap-4 text-center transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/10">
+                <img
+                  src={technology.icon}
+                  alt={technology.name}
+                  className="h-12 w-12 object-contain"
+                />
               </div>
+              <p className="text-sm font-medium text-white/80">{technology.name}</p>
             </div>
           </motion.div>
         ))}

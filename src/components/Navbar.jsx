@@ -101,7 +101,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } glass-panel absolute right-4 top-[68px] z-50 min-w-[260px] rounded-2xl border border-white/15 bg-[#080d23]/95 backdrop-blur-xl p-6 shadow-2xl shadow-black/60`}
           >
-            <ul className="flex flex-col w-full gap-6 text-white/90">
+            <ul className="flex flex-col w-full gap-6 list-none text-white/90">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}

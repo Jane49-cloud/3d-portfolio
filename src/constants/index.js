@@ -82,40 +82,24 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "Scss",
-    icon: Sass,
-  },
-  {
-    name: "Bootstrap",
-    icon: bootstrap,
-  },
-  {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "Python",
-    icon: python,
+    name: "TypeScript",
+    icon: typescript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "React Native",
+    icon: "https://reactnative.dev/img/header_logo.svg",
+  },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   },
   {
     name: "Tailwind CSS",
@@ -130,21 +114,37 @@ const technologies = [
     icon: mongodb,
   },
   {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Claude Code",
+    icon: "https://cdn.simpleicons.org/anthropic/white",
+  },
+  {
+    name: "Expo",
+    icon: "https://cdn.simpleicons.org/expo/white",
+  },
+  {
     name: "Django",
     icon: django,
   },
   {
-    name: "git",
+    name: "AWS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+  },
+  {
+    name: "GitHub Actions",
+    icon: "https://cdn.simpleicons.org/githubactions/white",
+  },
+  {
+    name: "Docker",
+    icon: docker,
+  },
+  {
+    name: "Git",
     icon: git,
   },
-  // {
-  //   name: "figma",
-  //   icon: figma,
-  // },
-  // {
-  //   name: "docker",
-  //   icon: docker,
-  // },
 ];
 
 const experiences = [
