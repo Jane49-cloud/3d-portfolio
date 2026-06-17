@@ -50,7 +50,7 @@ const Contact = () => {
           variants={slideIn("left", "tween", 0.2, 1)}
           className="glass-border w-full xl:max-w-3xl"
         >
-          <div className="glass-panel rounded-[28px] px-8 py-10">
+          <div className="glass-panel rounded-[28px] px-5 sm:px-8 py-7 sm:py-10">
             <h3 className="text-xl font-semibold text-white">Project inquiry</h3>
             <p className="mt-2 text-xs text-white/60">
               Share a little about your goals and I’ll respond within 24 hours.

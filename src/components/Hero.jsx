@@ -55,18 +55,18 @@ const Hero = () => {
       {/* Gradient orbs */}
       <motion.div
         style={{ x: mousePosition.x, y: mousePosition.y }}
-        className="absolute top-20 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"
+        className="absolute top-20 left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-purple-500/30 rounded-full blur-3xl"
       />
       <motion.div
         style={{ x: -mousePosition.x, y: -mousePosition.y }}
-        className="absolute bottom-20 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl"
+        className="absolute bottom-20 right-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-cyan-500/30 rounded-full blur-3xl"
       />
 
       <motion.div
         style={{ y, opacity }}
-        className="relative max-w-7xl mx-auto px-6 sm:px-12 pt-32 pb-20"
+        className="relative max-w-7xl mx-auto px-5 sm:px-12 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20"
       >
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -90,7 +90,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Main heading */}
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-6 leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-5 sm:mb-6 leading-none">
               <span className="block text-white">Craft meets</span>
               <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
                 Engineering
@@ -107,12 +107,12 @@ const Hero = () => {
             </p>
 
             {/* CTA buttons */}
-            <div className="flex flex-wrap gap-4 mb-12">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-12">
               <motion.a
                 href="#works"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold text-white shadow-[0_0_40px_rgba(6,182,212,0.4)] hover:shadow-[0_0_60px_rgba(6,182,212,0.6)] transition-shadow"
+                className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold text-white shadow-[0_0_40px_rgba(6,182,212,0.4)] hover:shadow-[0_0_60px_rgba(6,182,212,0.6)] transition-shadow"
               >
                 View Portfolio
               </motion.a>
@@ -120,14 +120,14 @@ const Hero = () => {
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-slate-700 hover:border-cyan-500/50 rounded-full font-semibold text-white backdrop-blur-sm transition-colors"
+                className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base border-2 border-slate-700 hover:border-cyan-500/50 rounded-full font-semibold text-white backdrop-blur-sm transition-colors"
               >
                 Let's Talk
               </motion.a>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-8 sm:mb-12">
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}
@@ -246,13 +246,13 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-8 -left-8 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl p-4 shadow-2xl max-w-[200px]"
+                className="absolute -top-4 -left-4 sm:-top-8 sm:-left-8 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl max-w-[150px] sm:max-w-[200px]"
               >
                 <div className="text-xs font-semibold text-cyan-100 mb-1">
-                  Current Project
+                  Shipping Soon
                 </div>
                 <div className="text-sm font-bold text-white">
-                  AI-Powered Analytics
+                  Pixels With Purpose
                 </div>
               </motion.div>
 
@@ -263,7 +263,7 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -bottom-8 -right-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-4 shadow-2xl max-w-[200px]"
+                className="absolute -bottom-4 -right-4 sm:-bottom-8 sm:-right-8 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl max-w-[150px] sm:max-w-[200px]"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />

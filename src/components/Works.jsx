@@ -79,7 +79,7 @@ const Works = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className="mt-10 grid gap-8 md:grid-cols-3"
+        className="mt-10 grid gap-5 sm:gap-6 md:gap-8 md:grid-cols-3"
       >
         {projects.map((project, index) => (
           <ProjectCard key={project.name} index={index} {...project} />

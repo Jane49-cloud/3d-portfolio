@@ -13,7 +13,7 @@ const Tech = () => {
         Modern frameworks, robust architecture, and elegant UX. I craft every product with a balanced blend of technology and taste, selecting the stack that unlocks fluent, scalable experiences.
       </p>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
         {technologies.map((technology, index) => (
           <motion.div
             key={technology.name}
