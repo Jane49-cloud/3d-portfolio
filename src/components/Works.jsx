@@ -1,92 +1,126 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { caseStudies, projects } from "../constants";
 
-import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
-
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => (
+const CaseStudy = ({ study, index }) => (
   <motion.article
-    variants={fadeIn("up", "spring", index * 0.12, 0.85)}
-    className="group relative flex h-full flex-col overflow-hidden rounded-[28px]"
+    className={index === 0 ? "case-study featured" : "case-study"}
+    initial={{ opacity: 0, y: 28 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.6 }}
+    whileHover={{ y: -4 }}
   >
-    <div className="glass-border rounded-[28px] p-[1.5px] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-glow md:h-[450px]">
-      <div className="glass-panel flex h-full flex-col justify-between rounded-[26px] p-6">
-        <div className="relative h-56 w-full overflow-hidden rounded-[22px]">
-          <img
-            src={image}
-            alt={`${name} preview`}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <button
-            type="button"
-            onClick={() => window.open(source_code_link, "_blank")}
-            className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:scale-105 hover:bg-white/20"
-            aria-label={`Open ${name} source code`}
-          >
-            <img src={github} alt="GitHub" className="h-4 w-4" />
-          </button>
-        </div>
+    <header className="case-study-header">
+      <div>
+        <p className="project-eyebrow">{study.number} / {study.label}</p>
+        <h3>{study.name}</h3>
+      </div>
+    </header>
 
-        <div className="mt-6 space-y-3">
-          <h3 className="text-xl font-semibold text-white">{name}</h3>
-          <p className="text-sm leading-6 text-white/70">{description}</p>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <span
-                key={`${name}-${tag.name}`}
-                className={`rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-white/70 ${tag.color}`}
-              >
-                #{tag.name}
-              </span>
-            ))}
-          </div>
+    <div className="case-study-body">
+      <div className="case-summary">
+        <p className="case-role">{study.role}</p>
+        <p>{study.summary}</p>
+        <div className="case-outcome">
+          <span>Outcome</span>
+          <strong>{study.outcome}</strong>
         </div>
       </div>
+
+      <div className="case-scope">
+        <p className="case-label">What I worked on</p>
+        <ul>
+          {study.scope.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </div>
     </div>
+
+    <div className="case-challenge">
+      <span>One challenge</span>
+      <p>{study.challenge}</p>
+    </div>
+
+    <footer className="case-footer">
+      <ul aria-label={study.name + " technologies"}>
+        {study.stack.map((item) => <li key={item}>{item}</li>)}
+      </ul>
+    </footer>
   </motion.article>
 );
 
-const Works = () => {
-  return (
-    <section className="relative">
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Signature builds.</h2>
-      </motion.div>
-
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 max-w-3xl text-sm leading-7 text-white/70"
+const Works = () => (
+  <section className="work identity-work" id="work">
+    <div className="section-inner">
+      <motion.header
+        className="section-heading work-heading"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
       >
-        Selected projects that balance artistry with robust engineering. Each
-        launch is a handcrafted journey from concept and brand through to
-        maintainable code and premium delivery.
-      </motion.p>
+        <div>
+          <p className="eyebrow"><span>01</span> Selected work</p>
+          <h2>A closer look at<br /><em>two products.</em></h2>
+        </div>
+        <p>
+          LifeFast is a personal project I took from an idea to Google Play.
+          Ziya is team-based fintech work across a mobile app and an
+          administration dashboard.
+        </p>
+      </motion.header>
+
+      <div className="case-study-list">
+        {caseStudies.map((study, index) => (
+          <CaseStudy key={study.name} study={study} index={index} />
+        ))}
+      </div>
 
       <motion.div
-        variants={staggerContainer(0.12, 0.25)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="mt-10 grid gap-5 sm:gap-6 md:gap-8 md:grid-cols-3"
+        className="earlier-work"
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.12 }}
+        transition={{ duration: 0.55 }}
       >
-        {projects.map((project, index) => (
-          <ProjectCard key={project.name} index={index} {...project} />
-        ))}
+        <motion.div
+          className="earlier-work-heading"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45, delay: 0.08 }}
+        >
+          <p className="eyebrow">Other projects</p>
+          <p>A few smaller applications from different stages of my development work.</p>
+        </motion.div>
+        <motion.div
+          className="earlier-work-list"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.08 }}
+          variants={{ show: { transition: { staggerChildren: 0.07 } } }}
+        >
+          {projects.map((project, index) => (
+            <motion.a
+              key={project.name}
+              href={project.source_code_link}
+              target="_blank"
+              rel="noreferrer"
+              variants={{
+                hidden: { opacity: 0, y: 18 },
+                show: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.4 }}
+              whileHover={{ y: -4 }}
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{project.name}</strong>
+              <small>{project.eyebrow}</small>
+              <i aria-hidden="true">↗</i>
+            </motion.a>
+          ))}
+        </motion.div>
       </motion.div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
-export default SectionWrapper(Works, "work");
+export default Works;

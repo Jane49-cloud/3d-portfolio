@@ -1,43 +1,166 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
-import { fadeIn } from "../utils/motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { notes } from "../constants";
+
+const toolsets = [
+  {
+    id: "mobile",
+    label: "Mobile",
+    number: "01",
+    title: "Apps for phones and tablets.",
+    description: "Android and iOS product journeys from application state through testing and store release.",
+    tools: ["React Native", "Expo", "Expo Router", "EAS Build", "Android", "iOS"],
+  },
+  {
+    id: "web",
+    label: "Web & state",
+    number: "02",
+    title: "Interfaces with context.",
+    description: "Web products and dependable client-side data flows for complex operations.",
+    tools: ["React", "TypeScript", "Redux Toolkit", "RTK Query", "Ant Design"],
+  },
+  {
+    id: "backend",
+    label: "Backend & data",
+    number: "03",
+    title: "Beyond the interface.",
+    description: "The services, integrations and data decisions that make the product work.",
+    tools: ["Node.js", "Express", "PostgreSQL", "Firebase", "REST APIs", "Go API integration"],
+  },
+  {
+    id: "production",
+    label: "Production",
+    number: "04",
+    title: "Getting it into the world.",
+    description: "Infrastructure, external services and release work that turn a build into a product.",
+    tools: ["DigitalOcean", "Ubuntu", "Nginx", "SSL", "Google Play"],
+  },
+];
 
 const Tech = () => {
-  return (
-    <section className="relative">
-      <p className="text-xs uppercase tracking-[0.35em] text-accent">Capabilities</p>
-      <h2 className="mt-3 text-[30px] font-semibold text-white sm:text-[36px]">A curated toolset</h2>
-      <p className="mt-3 max-w-3xl text-sm leading-7 text-white/70">
-        Modern frameworks, robust architecture, and elegant UX. I craft every product with a balanced blend of technology and taste, selecting the stack that unlocks fluent, scalable experiences.
-      </p>
+  const [activeId, setActiveId] = useState(toolsets[0].id);
+  const active = toolsets.find((item) => item.id === activeId);
 
-      <div className="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
-        {technologies.map((technology, index) => (
+  return (
+    <section className="notes-section" id="toolkit">
+      <div className="section-inner">
+        <motion.header
+          className="notes-heading"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <p className="eyebrow"><span>03</span> Tools I use</p>
+          <div>
+            <h2>My working<br /><em>toolkit.</em></h2>
+            <p>
+              My work moves between the interface and the systems supporting
+              it. React Native and Expo are important parts of that range,
+              alongside web applications, APIs, data and production delivery.
+            </p>
+          </div>
+        </motion.header>
+
+        <motion.div
+          className="toolbox"
+          id="toolbox"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.12 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="toolbox-intro">
+            <p className="eyebrow">Grouped by where they help</p>
+            <h2>Pick a layer.</h2>
+          </div>
+          <div className="toolbox-tabs" role="tablist" aria-label="Technical toolkit">
+            {toolsets.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                role="tab"
+                aria-selected={activeId === item.id}
+                className={activeId === item.id ? "active" : ""}
+                onClick={() => setActiveId(item.id)}
+              >
+                <span>{item.number}</span>{item.label}
+              </button>
+            ))}
+          </div>
+          <div className="toolbox-panel">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active.id}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2 }}
+                role="tabpanel"
+              >
+                <div>
+                  <small>{active.label}</small>
+                  <h3>{active.title}</h3>
+                  <p>{active.description}</p>
+                </div>
+                <ul>
+                  {active.tools.map((tool, index) => (
+                    <li key={tool}><span>{String(index + 1).padStart(2, "0")}</span>{tool}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="writing-block"
+          id="notes"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.12 }}
+          transition={{ duration: 0.55 }}
+        >
           <motion.div
-            key={technology.name}
-            variants={fadeIn("up", "spring", index * 0.08, 0.65)}
+            className="writing-heading"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.08 }}
+          >
+            <p className="eyebrow">Writing & notes</p>
+            <p>Older notes from learning in public—the trail behind the work.</p>
+          </motion.div>
+          <motion.div
+            className="notes-grid"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.4 }}
-            className="group"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={{ show: { transition: { staggerChildren: 0.08 } } }}
           >
-            <div className="flex flex-col items-center gap-4 text-center transition-transform duration-500 group-hover:-translate-y-2">
-              <div className="relative flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/10">
-                <img
-                  src={technology.icon}
-                  alt={technology.name}
-                  className="h-12 w-12 object-contain"
-                />
-              </div>
-              <p className="text-sm font-medium text-white/80">{technology.name}</p>
-            </div>
+            {notes.map((note) => (
+              <motion.a
+                key={note.number}
+                href={note.href}
+                target="_blank"
+                rel="noreferrer"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.42 }}
+                whileHover={{ y: -5 }}
+              >
+                <span>{note.number}</span>
+                <small>{note.label}</small>
+                <h3>{note.title}</h3>
+                <i aria-hidden="true">Read on DEV ↗</i>
+              </motion.a>
+            ))}
           </motion.div>
-        ))}
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default SectionWrapper(Tech, "skills");
+export default Tech;
