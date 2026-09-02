@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jane M. Ndirangu — Résumé</title>
+    <style>
+      @page { size: A4; margin: 0; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: #16191b;
+        background: #e8e6e1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.4px;
+        line-height: 1.48;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 8mm auto;
+        padding: 14mm 15mm 12mm;
+        background: #fff;
+      }
+      .page + .page { break-before: page; }
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        padding-bottom: 9mm;
+        border-bottom: 2px solid #16191b;
+      }
+      h1 {
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: -0.045em;
+        line-height: 1;
+      }
+      .title {
+        margin: 6px 0 0;
+        color: #b96732;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .contact {
+        display: grid;
+        align-content: start;
+        gap: 3px;
+        text-align: right;
+      }
+      a { color: inherit; text-decoration: none; }
+      section { margin-top: 8mm; }
+      h2 {
+        margin: 0 0 4mm;
+        color: #b96732;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      h3 {
+        margin: 0;
+        font-size: 11.2px;
+      }
+      p { margin: 0; }
+      .summary {
+        max-width: 166mm;
+        font-size: 11.2px;
+        line-height: 1.58;
+      }
+      .strengths {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+      }
+      .strength {
+        padding: 4mm;
+        border-top: 2px solid #b96732;
+        background: #f5f3ef;
+      }
+      .strength strong {
+        display: block;
+        margin-bottom: 1.5mm;
+        font-size: 10.5px;
+      }
+      .strength p { color: #555a5c; }
+      .entry {
+        margin-bottom: 5.5mm;
+        break-inside: avoid;
+      }
+      .entry-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .entry-head span {
+        color: #676b6d;
+        font-size: 9.2px;
+        white-space: nowrap;
+      }
+      .role {
+        margin: 1px 0 2mm;
+        color: #4d5254;
+        font-weight: 700;
+      }
+      ul {
+        margin: 0;
+        padding-left: 15px;
+      }
+      li { margin-bottom: 1.25mm; }
+      .page-title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 6mm;
+        border-bottom: 2px solid #16191b;
+      }
+      .page-title h1 { font-size: 20px; }
+      .page-title span {
+        color: #767a7c;
+        font-size: 9px;
+      }
+      .page-two-grid {
+        display: grid;
+        grid-template-columns: 1.45fr 0.72fr;
+        gap: 10mm;
+      }
+      .project {
+        padding: 5mm;
+        border-left: 2px solid #b96732;
+        background: #f5f3ef;
+      }
+      .project .role { margin: 1mm 0 3mm; }
+      .project ul { margin-top: 3mm; }
+      .outcome {
+        display: inline-block;
+        margin-top: 3mm;
+        padding: 2mm 3mm;
+        color: #8e4820;
+        background: #ead8c9;
+        font-weight: 700;
+      }
+      .work-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4mm;
+      }
+      .work-item {
+        padding: 4mm;
+        border: 1px solid #d6d3ce;
+      }
+      .work-item strong {
+        display: block;
+        margin-bottom: 1.5mm;
+      }
+      .work-item p { color: #555a5c; }
+      .skill-group { margin-bottom: 4mm; }
+      .skill-group strong {
+        display: block;
+        margin-bottom: 1.2mm;
+        font-size: 10.2px;
+      }
+      .skill-group p { color: #4f5456; }
+      .compact p + p { margin-top: 1mm; color: #5b6062; }
+      .reference {
+        margin-bottom: 4mm;
+        padding-bottom: 3mm;
+        border-bottom: 1px solid #dedbd6;
+      }
+      .reference:last-child { border-bottom: 0; }
+      .reference strong { display: block; }
+      .reference span {
+        display: block;
+        color: #555a5c;
+      }
+      .note {
+        color: #74787a;
+        font-size: 8.5px;
+      }
+      @media print {
+        body { background: #fff; }
+        .page { margin: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <h1>Jane M. Ndirangu</h1>
+          <p class="title">Software Engineer</p>
+        </div>
+        <div class="contact">
+          <a href="tel:+254791055992">+254 791 055 992</a>
+          <a href="mailto:janendirangu49@gmail.com">janendirangu49@gmail.com</a>
+          <a href="https://janendirangu-info.onrender.com/">janendirangu-info.onrender.com</a>
+          <a href="https://github.com/Jane49-cloud">github.com/Jane49-cloud</a>
+          <a href="https://www.linkedin.com/in/ndirangu-jane-692477256/">LinkedIn · Jane Ndirangu</a>
+          <span>Kenya</span>
+        </div>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">
+          Software engineer working across mobile, web and the systems behind them.
+          My experience includes React Native and Expo applications, React administration
+          systems, API integration, state management, PostgreSQL, Firebase, cloud
+          deployment and production releases. I am most effective when I can understand
+          the real workflow, clarify incomplete requirements and help connect the
+          interface, data and operational details into a maintainable product.
+        </p>
+      </section>
+
+      <section>
+        <h2>What I bring</h2>
+        <div class="strengths">
+          <div class="strength">
+            <strong>Product context</strong>
+            <p>Translating business operations and changing requirements into understandable product flows.</p>
+          </div>
+          <div class="strength">
+            <strong>Technical range</strong>
+            <p>Following work across mobile, web, APIs, data, infrastructure and third-party services.</p>
+          </div>
+          <div class="strength">
+            <strong>Production awareness</strong>
+            <p>Testing, releases, security concerns, migrations, support and the details after implementation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Ziya Afrika</h3>
+            <span>Feb 2025 — Present</span>
+          </div>
+          <p class="role">Web &amp; Mobile Developer</p>
+          <ul>
+            <li>Build React Native journeys for member groups, wallets, deposits, transfers, agent withdrawals, loans and repayments.</li>
+            <li>Develop React administration workflows with server-driven pagination, multiple filters, status controls and debounced search.</li>
+            <li>Integrate Go APIs using Redux Toolkit and RTK Query, and collaborate with backend engineers to clarify financial records, actors and business rules.</li>
+            <li>Built an administration activity tracker that translates last-access data into clear operational health categories.</li>
+            <li>Prepare end-to-end stakeholder demonstrations and document product, integration and application-security concerns.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Panache Technohub Limited</h3>
+            <span>Oct 2024 — Feb 2025</span>
+          </div>
+          <p class="role">System Developer</p>
+          <ul>
+            <li>Built internal administration portal features and mobile functionality for active products.</li>
+            <li>Implemented React and Next.js interfaces with TypeScript, API integration and application-state management.</li>
+            <li>Contributed to UI/UX decisions, testing, verification, research and code review.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Adzec Software and Tech</h3>
+            <span>Jan 2024 — Aug 2024</span>
+          </div>
+          <p class="role">Full-Stack Web Developer</p>
+          <ul>
+            <li>Developed and maintained customer-facing websites and translated user requirements into implementation work.</li>
+            <li>Supported web maintenance, code review, research, content and project coordination.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Innovia Kenya</h3>
+            <span>2023 — 2024</span>
+          </div>
+          <p class="role">Full-Stack Web Developer</p>
+          <ul>
+            <li>Built and maintained web applications, gathered customer requirements and supported ongoing improvements.</li>
+            <li>Worked across implementation, maintenance, customer support and code review.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Gritnet Solutions</h3>
+            <span>2022 — 2023</span>
+          </div>
+          <p class="role">React Developer</p>
+          <ul>
+            <li>Developed React interfaces and supported website delivery, requirements gathering and maintenance.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+    <div class="page">
+      <div class="page-title">
+        <h1>Jane M. Ndirangu</h1>
+        <span>Résumé · Page 2 of 2</span>
+      </div>
+
+      <div class="page-two-grid">
+        <div>
+          <section>
+            <h2>Selected Product</h2>
+            <article class="project">
+              <h3>LifeFast</h3>
+              <p class="role">Founder, Product Designer &amp; Full-Stack Mobile Engineer</p>
+              <p>
+                Independently designed, developed and launched a fasting and wellness
+                application combining fasting sessions, hydration, progress history,
+                educational content and community participation.
+              </p>
+              <ul>
+                <li>Built the React Native and Expo application with Redux Toolkit and RTK Query.</li>
+                <li>Developed the Node.js and Express API with PostgreSQL and supporting administration tools.</li>
+                <li>Deployed to DigitalOcean behind Nginx, configured domains and SSL, and managed the production database.</li>
+                <li>Integrated authentication, password-reset email, notifications, advertising and in-app purchase experiments.</li>
+                <li>Migrated data from CockroachDB to PostgreSQL and replaced blocked SMTP infrastructure with transactional email.</li>
+                <li>Managed EAS builds, closed testing, Google Play compliance and the production release.</li>
+              </ul>
+              <span class="outcome">Published globally on Google Play · 500+ downloads</span>
+            </article>
+          </section>
+
+          <section>
+            <h2>Selected Engineering Work</h2>
+            <div class="work-list">
+              <div class="work-item">
+                <strong>Authentication &amp; sessions</strong>
+                <p>Email/password authentication, persistent sessions, profile management and password-reset journeys.</p>
+              </div>
+              <div class="work-item">
+                <strong>State &amp; API integration</strong>
+                <p>Redux Toolkit and RTK Query for API communication, caching, mutations and invalidation.</p>
+              </div>
+              <div class="work-item">
+                <strong>Search &amp; data-heavy lists</strong>
+                <p>Server pagination, filters, status controls and approximately 300 ms debounced search.</p>
+              </div>
+              <div class="work-item">
+                <strong>Infrastructure &amp; release</strong>
+                <p>Ubuntu, Nginx, SSL, managed PostgreSQL, Android builds, testing and Play Store releases.</p>
+              </div>
+              <div class="work-item">
+                <strong>Third-party services</strong>
+                <p>Firebase, Resend, Expo notifications, Google Play Billing, advertising and cloud uploads.</p>
+              </div>
+              <div class="work-item">
+                <strong>Product communication</strong>
+                <p>Requirements clarification, backend collaboration, stakeholder demos and technical documentation.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Education</h2>
+            <div class="compact">
+              <h3>Multimedia University of Kenya</h3>
+              <p>Bachelor of Business Information Technology</p>
+              <p>September 2019 — October 2023</p>
+            </div>
+          </section>
+        </div>
+
+        <aside>
+          <section>
+            <h2>Technical Skills</h2>
+            <div class="skill-group">
+              <strong>Mobile</strong>
+              <p>React Native, Expo, Expo Router, EAS Build, Android, iOS</p>
+            </div>
+            <div class="skill-group">
+              <strong>Web &amp; State</strong>
+              <p>React, TypeScript, JavaScript, Next.js, Redux Toolkit, RTK Query, Ant Design</p>
+            </div>
+            <div class="skill-group">
+              <strong>Backend &amp; Data</strong>
+              <p>Node.js, Express, PostgreSQL, Firebase, MongoDB, REST APIs, Go API integration</p>
+            </div>
+            <div class="skill-group">
+              <strong>Delivery</strong>
+              <p>DigitalOcean, Ubuntu, Nginx, SSL, Git, GitHub, Google Play and EAS</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Languages</h2>
+            <div class="skill-group"><strong>English</strong><p>Fluent</p></div>
+            <div class="skill-group"><strong>Swahili</strong><p>Fluent</p></div>
+            <div class="skill-group"><strong>German</strong><p>Basic</p></div>
+          </section>
+
+          <section>
+            <h2>Professional Links</h2>
+            <div class="skill-group">
+              <strong>LifeFast</strong>
+              <p><a href="https://lifefast.online/">lifefast.online</a></p>
+            </div>
+            <div class="skill-group">
+              <strong>Writing</strong>
+              <p><a href="https://dev.to/jane49cloud">dev.to/jane49cloud</a></p>
+            </div>
+          </section>
+
+          <section>
+            <h2>References</h2>
+            <div class="reference">
+              <strong>Eleli Ayub</strong>
+              <span>Project Manager</span>
+              <a href="tel:+254719722292">+254 719 722 292</a>
+            </div>
+            <div class="reference">
+              <strong>Njue Archadius</strong>
+              <span>Project Manager</span>
+              <a href="tel:+254792016962">+254 792 016 962</a>
+            </div>
+            <div class="reference">
+              <strong>Comark Maloba</strong>
+              <span>Project Manager</span>
+              <a href="tel:+254727149195">+254 727 149 195</a>
+            </div>
+          </section>
+
+          <p class="note">Employment dates and references are based on the résumé supplied by Jane Ndirangu.</p>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

@@ -30,8 +30,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        <a className="nav-cta" href="mailto:janendirangu49@gmail.com">
-          Let&apos;s talk <span aria-hidden="true">↗</span>
+        <a className="nav-cta" href="/Jane-Ndirangu-Resume.pdf" download>
+          Résumé <span aria-hidden="true">↓</span>
         </a>
 
         <button

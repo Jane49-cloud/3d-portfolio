@@ -4,6 +4,9 @@ import buddy from "../assets/buddy.png";
 import leads from "../assets/leads.png";
 import messager from "../assets/Messager.png";
 import ecommerce from "../assets/Ecommerce.png";
+import lifefastTimer from "../assets/lifefast-timer.jpg";
+import lifefastPlans from "../assets/lifefast-plans.jpg";
+import lifefastCommunity from "../assets/lifefast-community.jpg";
 
 export const navLinks = [
   { id: "work", title: "Case studies" },
@@ -24,8 +27,20 @@ export const caseStudies = [
     metric: "500+",
     metricLabel: "downloads",
     stack: ["React Native", "Expo", "Node.js", "PostgreSQL"],
+    visuals: [
+      { src: lifefastTimer, alt: "LifeFast fasting timer home screen" },
+      { src: lifefastPlans, alt: "LifeFast fasting plans screen" },
+      { src: lifefastCommunity, alt: "LifeFast community chat screen" },
+    ],
+    links: [
+      {
+        label: "View on Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.jane.ndirangu.lifefast",
+      },
+      { label: "Visit LifeFast", href: "https://lifefast.online/" },
+    ],
     scope: [
-      "React Native app, Node.js API and a small administration area",
+      "React Native application, Node.js API and supporting administration interface",
       "PostgreSQL data, DigitalOcean hosting, Nginx, domains and SSL",
       "Authentication, transactional email, notifications and purchase experiments",
       "Closed testing, Play Store requirements and the production release",
@@ -40,10 +55,11 @@ export const caseStudies = [
     role: "Mobile and web engineering within a product team",
     summary:
       "A financial operations platform supporting member groups, deposits, transfers, withdrawals, loans, repayments and administrative oversight.",
-    outcome: "Mobile and admin workflows used for financial operations",
+    outcome: "Delivered mobile and administrative workflows for groups, wallets, transactions, loans and repayments",
     metric: "2",
     metricLabel: "product surfaces",
     stack: ["React Native", "React", "RTK Query", "Go APIs"],
+    confidential: true,
     scope: [
       "Mobile flows for groups, wallets, loans, repayments and transactions",
       "Admin tables with pagination, filters and debounced search",
@@ -81,10 +97,12 @@ export const technologies = [
   "TypeScript",
   "React",
   "React Native",
+  "iOS",
   "Next.js",
   "Node.js",
   "Django",
   "PostgreSQL",
+  "Firebase",
   "MongoDB",
   "Tailwind CSS",
   "Docker",
@@ -171,13 +189,7 @@ export const notes = [
   },
   {
     number: "03",
-    title: "Password encryption in Node.js",
-    label: "Node.js / 3 min",
-    href: "https://dev.to/jane49cloud/where-to-impliment-password-encryption-in-nodejs-4e7k",
-  },
-  {
-    number: "04",
-    title: "Before getting started with Node",
+    title: "What to learn before getting started with Node.js",
     label: "Node.js / 1 min",
     href: "https://dev.to/jane49cloud/some-of-the-things-you-need-to-learn-before-getting-started-on-node-38hi",
   },

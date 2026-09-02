@@ -81,6 +81,9 @@ const Hero = () => {
             <a className="text-link" href="mailto:janendirangu49@gmail.com">
               Email me <span aria-hidden="true">↗</span>
             </a>
+            <a className="text-link" href="/Jane-Ndirangu-Resume.pdf" download>
+              Résumé <span aria-hidden="true">↓</span>
+            </a>
           </motion.div>
         </motion.div>
 
@@ -122,7 +125,7 @@ const Hero = () => {
           <div className="ownership-proof">
             <div><strong>Mobile</strong><span>Apps people carry</span></div>
             <div><strong>Web</strong><span>Tools teams use</span></div>
-            <div><strong>Backend</strong><span>Enough to follow the data</span></div>
+            <div><strong>Backend</strong><span>Following the data end to end</span></div>
           </div>
 
           <p className="ownership-note">

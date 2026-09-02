@@ -46,9 +46,10 @@ const Tech = () => {
       <div className="section-inner">
         <motion.header
           className="notes-heading"
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 42 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="eyebrow"><span>03</span> Tools I use</p>
           <div>
@@ -64,10 +65,10 @@ const Tech = () => {
         <motion.div
           className="toolbox"
           id="toolbox"
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.12 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 48, scale: 0.975 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.12 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="toolbox-intro">
             <p className="eyebrow">Grouped by where they help</p>
@@ -115,10 +116,10 @@ const Tech = () => {
         <motion.div
           className="writing-block"
           id="notes"
-          initial={{ opacity: 0, y: 28 }}
+          initial={{ opacity: 0, y: 46 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.12 }}
-          transition={{ duration: 0.55 }}
+          viewport={{ once: false, amount: 0.12 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.div
             className="writing-heading"
@@ -134,7 +135,7 @@ const Tech = () => {
             className="notes-grid"
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.1 }}
             variants={{ show: { transition: { staggerChildren: 0.08 } } }}
           >
             {notes.map((note) => (
@@ -144,10 +145,10 @@ const Tech = () => {
                 target="_blank"
                 rel="noreferrer"
                 variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  show: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: 34, scale: 0.96 },
+                  show: { opacity: 1, y: 0, scale: 1 },
                 }}
-                transition={{ duration: 0.42 }}
+                transition={{ duration: 0.52, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -5 }}
               >
                 <span>{note.number}</span>

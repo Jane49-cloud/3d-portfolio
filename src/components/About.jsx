@@ -8,10 +8,10 @@ const About = () => (
       <div className="about-grid">
         <motion.div
           className="about-portrait"
-          initial={{ opacity: 0, rotate: -2, y: 26 }}
-          whileInView={{ opacity: 1, rotate: -1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.65 }}
+          initial={{ opacity: 0, rotate: -4, x: -42, scale: 0.95 }}
+          whileInView={{ opacity: 1, rotate: -1, x: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.22 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           whileHover={{ rotate: 0, scale: 1.01 }}
         >
           <img src={portrait} alt="Jane Ndirangu, full-stack developer" />
@@ -24,10 +24,10 @@ const About = () => (
 
         <motion.div
           className="about-copy"
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.65 }}
+          initial={{ opacity: 0, x: 42 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.22 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="eyebrow"><span>02</span> How I work</p>
           <h2>I like seeing<br /><em>the full picture.</em></h2>
@@ -57,17 +57,17 @@ const About = () => (
         className="services-list"
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.18 }}
+        viewport={{ once: false, amount: 0.18 }}
         variants={{ show: { transition: { staggerChildren: 0.12 } } }}
       >
         {services.map((service) => (
           <motion.article
             key={service.number}
             variants={{
-              hidden: { opacity: 0, y: 24 },
-              show: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 38, scale: 0.96 },
+              show: { opacity: 1, y: 0, scale: 1 },
             }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -5 }}
           >
             <span>{service.number}</span>

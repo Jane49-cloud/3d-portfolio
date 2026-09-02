@@ -22,17 +22,17 @@ const Contact = () => {
       <div className="section-inner contact-inner">
         <motion.p
           className="eyebrow"
-          initial={{ opacity: 0, x: -18 }}
+          initial={{ opacity: 0, x: -32 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.45 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         ><span>04</span> Contact</motion.p>
         <motion.div
           className="contact-grid"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, delay: 0.06 }}
+          initial={{ opacity: 0, y: 46, scale: 0.985 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.18 }}
+          transition={{ duration: 0.7, delay: 0.04, ease: [0.22, 1, 0.36, 1] }}
         >
           <div>
             <h2>Say hello.</h2>
@@ -56,10 +56,10 @@ const Contact = () => {
 
         <motion.div
           className="contact-bottom"
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.12 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <span><i className="status-dot" /> Kenya based · open to product teams</span>
           <nav aria-label="Social links">
