@@ -25,7 +25,16 @@ const toolsets = [
     number: "03",
     title: "Beyond the interface.",
     description: "The services, integrations and data decisions that make the product work.",
-    tools: ["Node.js", "Express", "PostgreSQL", "Firebase", "REST APIs", "Go API integration"],
+    tools: [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Firebase",
+      "Crashlytics",
+      "Remote Config",
+      "REST APIs",
+      "Go API integration",
+    ],
   },
   {
     id: "production",
@@ -33,7 +42,15 @@ const toolsets = [
     number: "04",
     title: "Getting it into the world.",
     description: "Infrastructure, external services and release work that turn a build into a product.",
-    tools: ["DigitalOcean", "Ubuntu", "Nginx", "SSL", "Google Play"],
+    tools: [
+      "DigitalOcean",
+      "Ubuntu",
+      "Nginx",
+      "SSL",
+      "Google Play",
+      "Git / GitHub",
+      "Ticketing workflows",
+    ],
   },
 ];
 

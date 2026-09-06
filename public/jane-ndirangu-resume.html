@@ -17,12 +17,18 @@
       }
       .page {
         width: 210mm;
-        min-height: 297mm;
-        margin: 8mm auto;
+        height: 297mm;
+        margin: 0 auto;
         padding: 14mm 15mm 12mm;
         background: #fff;
+        break-after: page;
+        page-break-after: always;
+        overflow: hidden;
       }
-      .page + .page { break-before: page; }
+      .page:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
       header {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -125,6 +131,7 @@
         grid-template-columns: 1.45fr 0.72fr;
         gap: 10mm;
       }
+      .page-two-grid aside section { margin-top: 5.5mm; }
       .project {
         padding: 5mm;
         border-left: 2px solid #b96732;
@@ -140,20 +147,6 @@
         background: #ead8c9;
         font-weight: 700;
       }
-      .work-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 4mm;
-      }
-      .work-item {
-        padding: 4mm;
-        border: 1px solid #d6d3ce;
-      }
-      .work-item strong {
-        display: block;
-        margin-bottom: 1.5mm;
-      }
-      .work-item p { color: #555a5c; }
       .skill-group { margin-bottom: 4mm; }
       .skill-group strong {
         display: block;
@@ -179,7 +172,9 @@
       }
       @media print {
         body { background: #fff; }
-        .page { margin: 0; }
+      }
+      @media screen {
+        .page { margin: 8mm auto; }
       }
     </style>
   </head>
@@ -188,7 +183,7 @@
       <header>
         <div>
           <h1>Jane M. Ndirangu</h1>
-          <p class="title">Software Engineer</p>
+          <p class="title">Full-Stack Software Developer</p>
         </div>
         <div class="contact">
           <a href="tel:+254791055992">+254 791 055 992</a>
@@ -203,12 +198,12 @@
       <section>
         <h2>Profile</h2>
         <p class="summary">
-          Software engineer working across mobile, web and the systems behind them.
-          My experience includes React Native and Expo applications, React administration
-          systems, API integration, state management, PostgreSQL, Firebase, cloud
-          deployment and production releases. I am most effective when I can understand
-          the real workflow, clarify incomplete requirements and help connect the
-          interface, data and operational details into a maintainable product.
+          Full-stack software developer with experience delivering web and mobile
+          applications from requirements and research through design, implementation,
+          testing, release and maintenance. My work also includes team coordination,
+          training, code review, customer support and translating user needs into practical
+          solutions. I value precision, continuous learning, customer satisfaction and
+          improving both the product and the way a team delivers it.
         </p>
       </section>
 
@@ -216,16 +211,16 @@
         <h2>What I bring</h2>
         <div class="strengths">
           <div class="strength">
-            <strong>Product context</strong>
-            <p>Translating business operations and changing requirements into understandable product flows.</p>
+            <strong>End-to-end delivery</strong>
+            <p>Taking work from requirements and research through implementation, testing, release and support.</p>
           </div>
           <div class="strength">
-            <strong>Technical range</strong>
-            <p>Following work across mobile, web, APIs, data, infrastructure and third-party services.</p>
+            <strong>Broad technical range</strong>
+            <p>Working across web, mobile, APIs, data, state management, infrastructure and third-party services.</p>
           </div>
           <div class="strength">
-            <strong>Production awareness</strong>
-            <p>Testing, releases, security concerns, migrations, support and the details after implementation.</p>
+            <strong>Team contribution</strong>
+            <p>Coordinating delivery, reviewing work, training colleagues and communicating with customers and stakeholders.</p>
           </div>
         </div>
       </section>
@@ -255,9 +250,11 @@
           </div>
           <p class="role">System Developer</p>
           <ul>
-            <li>Built internal administration portal features and mobile functionality for active products.</li>
-            <li>Implemented React and Next.js interfaces with TypeScript, API integration and application-state management.</li>
-            <li>Contributed to UI/UX decisions, testing, verification, research and code review.</li>
+            <li>Led day-to-day engineering work within the development team, coordinated tasks, followed up delivery and supported implementation decisions.</li>
+            <li>Worked across a broad set of web and mobile product features rather than a single administration interface.</li>
+            <li>Built React and Next.js interfaces with TypeScript, API integration and application-state management.</li>
+            <li>Reviewed work, tested product journeys and trained team members on project workflows, tools and implementation practices.</li>
+            <li>Contributed to requirements clarification, UI/UX decisions, research, verification and stakeholder-facing delivery.</li>
           </ul>
         </article>
 
@@ -268,8 +265,9 @@
           </div>
           <p class="role">Full-Stack Web Developer</p>
           <ul>
-            <li>Developed and maintained customer-facing websites and translated user requirements into implementation work.</li>
-            <li>Supported web maintenance, code review, research, content and project coordination.</li>
+            <li>Delivered customer websites from requirements collection and technical research through implementation and ongoing maintenance.</li>
+            <li>Translated customer details and changing requirements into scoped development tasks and product updates.</li>
+            <li>Worked across code implementation, maintenance, content creation, code review and project coordination.</li>
           </ul>
         </article>
 
@@ -280,19 +278,10 @@
           </div>
           <p class="role">Full-Stack Web Developer</p>
           <ul>
-            <li>Built and maintained web applications, gathered customer requirements and supported ongoing improvements.</li>
-            <li>Worked across implementation, maintenance, customer support and code review.</li>
-          </ul>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Gritnet Solutions</h3>
-            <span>2022 — 2023</span>
-          </div>
-          <p class="role">React Developer</p>
-          <ul>
-            <li>Developed React interfaces and supported website delivery, requirements gathering and maintenance.</li>
+            <li>Worked on a multi-vendor e-commerce platform spanning customer, vendor and administration experiences.</li>
+            <li>Developed and maintained full-stack product features while supporting requirements gathering and ongoing platform improvements.</li>
+            <li>Investigated issues across the purchasing and vendor workflows, delivered fixes and supported users after implementation.</li>
+            <li>Contributed to code maintenance, review and coordination as the product evolved.</li>
           </ul>
         </article>
       </section>
@@ -329,36 +318,6 @@
           </section>
 
           <section>
-            <h2>Selected Engineering Work</h2>
-            <div class="work-list">
-              <div class="work-item">
-                <strong>Authentication &amp; sessions</strong>
-                <p>Email/password authentication, persistent sessions, profile management and password-reset journeys.</p>
-              </div>
-              <div class="work-item">
-                <strong>State &amp; API integration</strong>
-                <p>Redux Toolkit and RTK Query for API communication, caching, mutations and invalidation.</p>
-              </div>
-              <div class="work-item">
-                <strong>Search &amp; data-heavy lists</strong>
-                <p>Server pagination, filters, status controls and approximately 300 ms debounced search.</p>
-              </div>
-              <div class="work-item">
-                <strong>Infrastructure &amp; release</strong>
-                <p>Ubuntu, Nginx, SSL, managed PostgreSQL, Android builds, testing and Play Store releases.</p>
-              </div>
-              <div class="work-item">
-                <strong>Third-party services</strong>
-                <p>Firebase, Resend, Expo notifications, Google Play Billing, advertising and cloud uploads.</p>
-              </div>
-              <div class="work-item">
-                <strong>Product communication</strong>
-                <p>Requirements clarification, backend collaboration, stakeholder demos and technical documentation.</p>
-              </div>
-            </div>
-          </section>
-
-          <section>
             <h2>Education</h2>
             <div class="compact">
               <h3>Multimedia University of Kenya</h3>
@@ -376,15 +335,23 @@
               <p>React Native, Expo, Expo Router, EAS Build, Android, iOS</p>
             </div>
             <div class="skill-group">
-              <strong>Web &amp; State</strong>
-              <p>React, TypeScript, JavaScript, Next.js, Redux Toolkit, RTK Query, Ant Design</p>
+              <strong>Web</strong>
+              <p>React, Next.js, TypeScript, JavaScript, Tailwind CSS and Ant Design</p>
             </div>
             <div class="skill-group">
-              <strong>Backend &amp; Data</strong>
-              <p>Node.js, Express, PostgreSQL, Firebase, MongoDB, REST APIs, Go API integration</p>
+              <strong>Backend &amp; APIs</strong>
+              <p>Node.js, Express, Python, Django, REST API development and Go API integration</p>
             </div>
             <div class="skill-group">
-              <strong>Delivery</strong>
+              <strong>Data &amp; State</strong>
+              <p>PostgreSQL, MongoDB, Firebase, Redux Toolkit and RTK Query</p>
+            </div>
+            <div class="skill-group">
+              <strong>Firebase &amp; Reliability</strong>
+              <p>Crashlytics, Remote Config, ticketing workflows and production issue follow-up</p>
+            </div>
+            <div class="skill-group">
+              <strong>Delivery &amp; Version Control</strong>
               <p>DigitalOcean, Ubuntu, Nginx, SSL, Git, GitHub, Google Play and EAS</p>
             </div>
           </section>
@@ -412,12 +379,12 @@
             <h2>References</h2>
             <div class="reference">
               <strong>Eleli Ayub</strong>
-              <span>Project Manager</span>
+              <span>Tech Lead</span>
               <a href="tel:+254719722292">+254 719 722 292</a>
             </div>
             <div class="reference">
               <strong>Njue Archadius</strong>
-              <span>Project Manager</span>
+              <span>Founder</span>
               <a href="tel:+254792016962">+254 792 016 962</a>
             </div>
             <div class="reference">
@@ -427,7 +394,6 @@
             </div>
           </section>
 
-          <p class="note">Employment dates and references are based on the résumé supplied by Jane Ndirangu.</p>
         </aside>
       </div>
     </div>

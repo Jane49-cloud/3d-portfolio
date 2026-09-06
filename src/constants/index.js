@@ -103,6 +103,8 @@ export const technologies = [
   "Django",
   "PostgreSQL",
   "Firebase",
+  "Crashlytics",
+  "Remote Config",
   "MongoDB",
   "Tailwind CSS",
   "Docker",
