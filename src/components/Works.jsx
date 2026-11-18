@@ -39,7 +39,7 @@ const CaseStudy = ({ study, index }) => (
           </motion.figure>
         ))}
       </motion.div>
-    ) : (
+    ) : study.confidential ? (
       <motion.div
         className="case-workflow"
         initial={{ opacity: 0, y: 20 }}
@@ -54,9 +54,9 @@ const CaseStudy = ({ study, index }) => (
         <div><span>03</span><strong>Admin oversight</strong><small>Operations · follow-up</small></div>
         <p>Product visuals are omitted to protect internal and customer information.</p>
       </motion.div>
-    )}
+    ) : null}
 
-    {study.visuals && (
+    {study.architecture && (
       <motion.div
         className="case-architecture"
         initial={{ opacity: 0, y: 14 }}

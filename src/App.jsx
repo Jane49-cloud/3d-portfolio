@@ -1,4 +1,4 @@
-import { About, Contact, Hero, Navbar, Tech, Works } from "./components";
+import { About, Contact, Hero, Navbar, Tech, WorkHistory, Works } from "./components";
 import { Footer } from "./Footer";
 
 const App = () => (
@@ -10,6 +10,7 @@ const App = () => (
     <main id="main-content">
       <Hero />
       <Works />
+      <WorkHistory />
       <About />
       <Tech />
       <Contact />

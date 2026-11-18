@@ -4,15 +4,52 @@ import buddy from "../assets/buddy.png";
 import leads from "../assets/leads.png";
 import messager from "../assets/Messager.png";
 import ecommerce from "../assets/Ecommerce.png";
-import lifefastTimer from "../assets/lifefast-timer.jpg";
-import lifefastPlans from "../assets/lifefast-plans.jpg";
-import lifefastCommunity from "../assets/lifefast-community.jpg";
 
 export const navLinks = [
   { id: "work", title: "Case studies" },
+  { id: "history", title: "Work history" },
   { id: "about", title: "About" },
   { id: "toolkit", title: "Toolkit" },
   { id: "contact", title: "Contact" },
+];
+
+export const workHistory = [
+  {
+    number: "01",
+    company: "Ziya Afrika",
+    role: "Web & Mobile Developer",
+    period: "Feb 2025 — Present",
+    focus: "Financial product delivery",
+    summary:
+      "Building mobile and administrative journeys for groups, wallets, transactions, loans and repayments, while working with backend engineers on transaction clarity and business rules.",
+  },
+  {
+    number: "02",
+    company: "Panache Technohub Limited",
+    role: "System Developer",
+    period: "Oct 2024 — Feb 2025",
+    focus: "Team delivery and product work",
+    summary:
+      "Led day-to-day engineering work, coordinated delivery, reviewed and tested product journeys, trained team members, and worked across web and mobile features.",
+  },
+  {
+    number: "03",
+    company: "Adzec Software and Tech",
+    role: "Full-Stack Web Developer",
+    period: "Jan 2024 — Aug 2024",
+    focus: "Customer product delivery",
+    summary:
+      "Delivered customer websites from requirements and research through implementation, maintenance, support, code review and project coordination.",
+  },
+  {
+    number: "04",
+    company: "Innovia Kenya",
+    role: "Full-Stack Web Developer",
+    period: "2023 — 2024",
+    focus: "Multi-vendor e-commerce",
+    summary:
+      "Worked on a multi-vendor commerce platform across customer, vendor and administrative experiences, supporting feature delivery, workflow fixes and ongoing platform improvements.",
+  },
 ];
 
 export const caseStudies = [
@@ -27,11 +64,7 @@ export const caseStudies = [
     metric: "500+",
     metricLabel: "downloads",
     stack: ["React Native", "Expo", "Node.js", "PostgreSQL"],
-    visuals: [
-      { src: lifefastTimer, alt: "LifeFast fasting timer home screen" },
-      { src: lifefastPlans, alt: "LifeFast fasting plans screen" },
-      { src: lifefastCommunity, alt: "LifeFast community chat screen" },
-    ],
+    architecture: true,
     links: [
       {
         label: "View on Google Play",

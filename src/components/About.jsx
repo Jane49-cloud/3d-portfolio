@@ -33,10 +33,10 @@ const About = () => (
           <h2>I like seeing<br /><em>the full picture.</em></h2>
           <div className="about-text">
             <p>
-              I&apos;m a software engineer with a background in Business
-              Information Technology. My focus is React Native and Expo, backed
-              by hands-on experience across React, APIs, PostgreSQL and
-              production infrastructure.
+              I&apos;m a full-stack software developer with a background in Business
+              Information Technology. My experience includes web and mobile
+              applications, APIs, databases, cloud infrastructure and production
+              delivery.
             </p>
             <p>
               I tend to ask how the full journey works: what the user is trying
